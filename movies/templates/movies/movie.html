@@ -1,0 +1,38 @@
+{% extends "movies/base.html" %}
+<!DOCTYPE html>
+<html>
+	
+	{% block title %}My Favorite Movies{% endblock title %}
+
+	<body>
+		<h1>My Favorite Movies are:</h1>
+		
+		{% comment %} {% block sidebar %}
+		<ul>
+			<h3>Favorite Movies page is showing</h3>
+			<li><a href="{% url 'home' %}">Home</a></li>
+			<li><a href="{% url 'contact' %}">Contact Me</a></li>
+			<li><a href="{% url 'movies' %}">Click to see my Favorite Movies</a></li>
+		</ul>
+		{% endblock %} {% endcomment %}
+
+
+		
+		{% block content %}
+			{% if movies %}
+				<ul>
+					{% for item in movies %}
+						<li>{{ item|title }}</li>
+					{% endfor %}
+				</ul>
+			{% else %}
+				<p>No Favorite Movies Found!</p>
+			{% endif %}
+		{% endblock %}
+
+
+	
+
+	</body>
+</html>
+

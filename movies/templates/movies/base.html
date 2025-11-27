@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    {% comment %} <link rel="stylesheet" href="style.css"> {% endcomment %}
+    <title>{% block title %}My Website{% endblock %}</title>
+</head>
+
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'contact' %}">Contact Me</a></li>
+            <li><a href="{% url 'movies' %}">Click to see my Favorite Movies</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}
+
+         <h2>Home Page</h2>
+
+        {% endblock %}
+    </div>
+</body>
+</html>
