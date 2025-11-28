@@ -1,11 +1,14 @@
 <html lang="en">
 <head>
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet" >
     {% comment %} <link rel="stylesheet" href="style.css"> {% endcomment %}
     <title>{% block title %}My Website{% endblock %}</title>
 </head>
 
 <body>
     <h1>به سایت گاموس ها خوش آمدید</h1>
+
     <div id="sidebar">
         {% block sidebar %}
         <ul>

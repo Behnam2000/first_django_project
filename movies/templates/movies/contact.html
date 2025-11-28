@@ -1,42 +1,35 @@
 {% extends "movies/base.html" %}
 <!DOCTYPE html>
-<html>
-    {% block title %} Contact Me {% endblock %}
-
-    <body>
-        <h1>Contact Me For more Debates...</h1>
+<html lang="en">
+<head>
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}به سایت گاموس ها خوش آمدید{% endblock %}</title>
     
-        {% comment %} {% block sidebar %}
-        <ul>
-            <h3>Contact page is showing</h3>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'contact' %}">Contact Me</a></li>
-            <li><a href="{% url 'movies' %}">Click to see my Favorite Movies</a></li>
-        </ul>
-        {% endblock %} {% endcomment %}
-
-
-
     
-        {% block content %}
-            <div name="about">
-                <h2>اگه جوبو جوبوی من دوسم داره با این شماره تماس بگیره:</h2>
+</head>
+<body>
+    {% block content %}
+        <div class="box">
+            <h1>سلام جاموس</h1>
+            <h2>اگه جوبو جوبوی من دوسم داره با این شماره تماس بگیره:</h2>
             <h3>Phone Number:</h3>
             <p>+989361970108</p>
+            
+        
+        </div>
 
-            <h3>Instagram:</h3>
-            <p>@behnam.7924</p>
-
-            <h3>Telegram:</h3>
-            <p>@Behnam7924</p>
-
+        <div class="pic">
             {% load static %}
-            <img src= "{% static 'movies/Behnam.jpg' %}" alt="my picture" width="200" >
-            </div>
-        {% endblock %}
+                <img src= "{% static 'movies/Behnam.jpg' %}" alt="my picture" width="200" >
+                <img src= "{% static 'movies/Bahar.jpg' %}" alt="bahar picture" width="200">
+        </div>
+        
+    {% endblock %}        
     
 
 
-
-    </body>
+</body>
 </html>
